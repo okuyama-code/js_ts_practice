@@ -1,8 +1,28 @@
 {
   "compilerOptions": {
+    // "lib": JavaScriptのバージョンと実行環境に応じた組み込みAPIを指定
+    // es2020: ECMAScript 2020の機能を使用可能に
+    // dom: ブラウザDOMの型定義を含む
     "lib": ["es2020", "dom"],
-    // 使用する型定義ファイルを指定
-    "types": ["node"]
+
+    // "types": グローバルに利用可能な型定義ファイルを指定
+    // node: Node.js環境の型定義を含む
+    "types": ["node"],
+
+    // "strict": すべての厳格な型チェックオプションを有効にする
+    // これにより、より安全なコードが書けるようになる
+    "strict": true,
+
+    // "strictNullChecks": null と undefined の取り扱いを厳格にする
+    // これにより、nullやundefinedによる予期せぬエラーを防ぐ
+    "strictNullChecks": true,
+
+    // "noImplicitAny": 暗黙的なany型を許可しない
+    // これにより、すべての変数に明示的な型付けが必要になる
+    "noImplicitAny": true
   },
+
+  // "include": コンパイル対象のファイルを指定
+  // **/*.ts: すべてのサブディレクトリを含む、すべての.tsファイルを対象とする
   "include": ["**/*.ts"]
 }
